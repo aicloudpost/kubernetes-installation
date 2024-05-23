@@ -42,3 +42,6 @@ Kubernetes Terminologies
 
 **Kube-proxy:** Network proxy which contains all the network rules on each node in the cluster.
 
+
+![image](https://github.com/aicloudpost/kubernetes-installation/assets/166476986/3726bce7-677d-4860-ade1-ac0dee491759)
+
