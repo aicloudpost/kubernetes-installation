@@ -126,3 +126,41 @@ Note: provision EC2 nodes and let’s proceed further for installation.
 15)	Join the worker nodes to the master node (control plane) using the join command.
     
 
+**Kubeadm Setup Prerequisites**
+
+Following are the prerequisites for Kubeadm Kubernetes cluster setup.
+
+1)	Minimum two Ubuntu nodes [One master and one worker node]. You can have more worker nodes as per your requirement.
+   
+3)	The master node should have a minimum of 2 vCPU and 2GB RAM.
+   
+5)	For the worker nodes, a minimum of 1vCPU and 2 GB RAM is recommended.
+   
+7)	10.X.X.X/X network range with static IPs for master and worker nodes. We will be using the 192.x.x.x series as the pod network range that will be used by the Calico network plugin. Make sure the Node IP range and pod IP range don’t overlap.
+   
+Note: If you are setting up the cluster in the corporate network behind a proxy, ensure set the proxy variables and have access to the container registry and docker hub. Or talk to your network administrator to whitelist registry.k8s.io to pull the required images.
+Kubeadm Port Requirements.
+
+Please refer to the following image and make sure all the ports are allowed for the control plane (master) and the worker nodes. If you are setting up the kubeadm cluster cloud servers, ensure you allow the ports in the firewall configuration.
+
+**Control plane**
+Protocol	Direction	Port Range	Purpose	Used By
+
+![image](https://github.com/aicloudpost/kubernetes-installation/assets/166476986/a8e18820-32df-4d4e-aecb-d8ef2d1da07b)
+
+
+Although etcd ports are included in control plane section, you can also host your own etcd cluster externally or on custom ports.
+
+**Worker node(s)**
+
+Protocol	Direction	Port Range	Purpose	Used By
+
+![image](https://github.com/aicloudpost/kubernetes-installation/assets/166476986/c6c8e19b-042c-447d-b9a8-cce41bda63bd)
+
+Default port range for NodePort Services.
+
+All default port numbers can be overridden. When custom ports are used those ports need to be open instead of defaults mentioned here.
+
+One common example is API server port that is sometimes switched to 443. Alternatively, the default port is kept as is and API server is put behind a load balancer that listens on 443 and routes the requests to API server on the default port.
+
+
