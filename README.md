@@ -42,8 +42,7 @@ Kubernetes Terminologies
 
 **Kube-proxy:** Network proxy which contains all the network rules on each node in the cluster.
 
-
-![image](https://github.com/aicloudpost/kubernetes-installation/assets/166476986/3726bce7-677d-4860-ade1-ac0dee491759)
+![kubernetes-architecture](https://github.com/aicloudpost/kubernetes-installation/assets/166476986/75f72074-1fa8-4610-b0fe-4ee92b212258)
 
 
 Kubernetes follows master-slave architecture. Kubernetes architecture has a master node and worker nodes. 
