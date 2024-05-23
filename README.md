@@ -1,2 +1,3 @@
-# kubernetes-installation
-kubernetes installation using kubeadm (cni=calico, cri=cri-o, os=ubuntu22.04)
+# Kubernetes-installation
+Installation details: Kubernetes installation using kubeadm (cni=calico, cri=cri-o, os=ubuntu22.04)
+####################################################################################################
