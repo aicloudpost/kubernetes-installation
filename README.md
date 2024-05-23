@@ -80,7 +80,7 @@ Kubernetes follows master-slave architecture. Kubernetes architecture has a mast
 
 •	Minikube: A free, open-source tool that runs a single-node cluster in a virtual machine on your laptop.
 
-**Prerequisites (recommended but resource specification may change depending on your workloads)
+**Prerequisites (recommended but resource specification may change depending on your workloads)**
 -------------------------------------------------------------------------------------------
 •	Minimal install of Ubuntu 22.04
 
@@ -106,4 +106,23 @@ Kubernetes follows master-slave architecture. Kubernetes architecture has a mast
 
 Note: provision EC2 nodes and let’s proceed further for installation.
 
-**
+
+**Overall, installing Kubernetes on Ubuntu involves steps such as:**
+
+1)	Disabling swap;
+   
+3)	Setting up hostnames;
+   
+5)	Setting up the IPV4 bridge on all the nodes;
+   
+7)	Installing Kubernetes components on all the nodes;
+   
+9)	Installing Docker or a suitable containerization tool on all the nodes;
+    
+11)	Initializing the Kubernetes cluster using kubeadm on the Master node;
+    
+13)	Install the Calico network plugin (operator) on the Master node.
+    
+15)	Join the worker nodes to the master node (control plane) using the join command.
+    
+
