@@ -66,3 +66,44 @@ Kubernetes follows master-slave architecture. Kubernetes architecture has a mast
 
 	container runtime
 
+**There are several ways to install Kubernetes, including**
+
+•	Single-node installation: Good for development, testing, and practices, or previewing Kubernetes.
+
+•	Unmanaged Kubernetes installation: You manage everything yourself, as it's not managed by a cloud vendor.
+
+•	Kubespray: A combination of Ansible and Kubernetes that provides deployment flexibility.
+
+•	Kubeadm: A popular method that's good for multi-node clusters and real-time setups.
+
+•	Kops: An open-source tool that's good for managing and creating small-scale, production-grade clusters.
+
+•	Minikube: A free, open-source tool that runs a single-node cluster in a virtual machine on your laptop.
+
+**Prerequisites (recommended but resource specification may change depending on your workloads)
+-------------------------------------------------------------------------------------------
+•	Minimal install of Ubuntu 22.04
+
+**Master:**
+-----------
+  	RAM: 2Gi or more
+
+  	Cores/Vcpu: 2 or more
+
+  	Storage: 20 Gig
+
+**Worker:**
+-----------
+  	RAM: 1Gi or more
+
+  	Cores/Vcpu: 2 or more
+
+  	Storage: 20 Gig
+
+•	Sudo user with admin rights
+
+•	Internet connectivity on each node
+
+Note: provision EC2 nodes and let’s proceed further for installation.
+
+**
